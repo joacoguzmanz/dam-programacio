@@ -1,4 +1,4 @@
-package FunctionsRepas;
+package UF2.FunctionsRepas;
 
 import java.util.Arrays;
 import java.util.HashSet;

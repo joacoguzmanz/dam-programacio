@@ -1,4 +1,4 @@
-package Estrelles;
+package UF2.Estrelles;
 
 public class Estrelles {
     public static void main(String[] args) {

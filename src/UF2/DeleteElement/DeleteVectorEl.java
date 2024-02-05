@@ -1,4 +1,4 @@
-package DeleteElement;
+package UF2.DeleteElement;
 
 import java.util.Scanner;
 

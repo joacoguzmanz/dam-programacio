@@ -1,4 +1,4 @@
-package LlegirNums;
+package UF2.LlegirNums;
 
 import java.util.Scanner;
 

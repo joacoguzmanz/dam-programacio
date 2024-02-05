@@ -1,31 +1,33 @@
-package LlegirNums;
+package UF2.LlegirNums;
 
 import java.util.Scanner;
 
-public class LlegirEnters {
+public class LlegirReals {
     public static void main (String[] args) {
-        LlegirEnters programa = new LlegirEnters();
+        LlegirReals programa = new LlegirReals();
         programa.inici();
     }
+
     public void inici() {
         System.out.println("Llegiu un enter pel teclat:");
-        int a = llegirEnterTeclat();
+        double a = llegirEnterTeclat();
         System.out.println("L’enter ha estat " + a + ".");
         System.out.println("Llegiu un altre enter pel teclat:");
         a = llegirEnterTeclat();
         System.out.println("L’altre enter ha estat " + a + ".");
     }
+
     //1. Quin tipus de valor genera? Un enter (int)
-    public int llegirEnterTeclat() {
+    public double llegirEnterTeclat() {
         //2. Es fa el codi que llegeix un únic enter del teclat, com s’ha fet sempre
         //No canvia absolutament res...
         Scanner lector = new Scanner(System.in);
-        int enterLlegit = 0;
+        double enterLlegit = 0;
         boolean llegit = false;
         while (!llegit) {
-            llegit = lector.hasNextInt();
+            llegit = lector.hasNextDouble();
             if (llegit) {
-                enterLlegit = lector.nextInt();
+                enterLlegit = lector.nextDouble();
             }
             else {
                 System.out.println("Això no és un enter.");
