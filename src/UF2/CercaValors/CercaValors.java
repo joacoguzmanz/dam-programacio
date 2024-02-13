@@ -1,7 +1,7 @@
 package UF2.CercaValors;
 
 import java.util.Arrays;
-import java.util.Random;
+import Toolkit.ArraysUtil;
 
 public class CercaValors {
     public static void main(String[] args) {
@@ -10,46 +10,22 @@ public class CercaValors {
     }
 
     public void inici() {
-        Random rd = new Random();
 
+        int[] array = ArraysUtil.createArray();
+        ArraysUtil.fillArrayRandom(array, 0, 20);
 
-        int[] array = new int[10];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = rd.nextInt(11);
-        }
         int[] copia1 = Arrays.copyOfRange(array, 0, 5);
+        ArraysUtil.printArrayInt(copia1);
 
-        System.out.print("[ ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]+" ");
-        }
-        System.out.println("]");
-
-
-        System.out.print("Valors a cercar: [ ");
-        for (int i = 0; i < copia1.length; i++) {
-            System.out.print(copia1[i]+" ");
-        }
-        System.out.println("]");
-
+        System.out.print("Valors a cercar: ");
+        ArraysUtil.printArrayInt(copia1);
 
         int[] copia2 = Arrays.copyOfRange(array, 5, array.length);
         Arrays.sort(copia2);
-        System.out.print("Array on es cerca: [ ");
-        for (int i = 0; i < copia2.length; i++) {
-            System.out.print(copia2[i]+" ");
-        }
-        System.out.println("]");
 
+        System.out.print("Array on es cerca: ");
+        ArraysUtil.printArrayInt(copia2);
 
-        for (int i = 0; i < copia1.length; i++) {
-            boolean trobat = false;
-            for (int j = 0; j < copia2.length; j++) {
-                if (copia1[i] == copia2[j] && !trobat) {
-                    System.out.println("A la posicio " + Arrays.binarySearch(copia2, copia1[i]) + " hi ha el valor " + copia1[i]);
-                    trobat = true;
-                }
-            }
-        }
+        ArraysUtil.printArrayValuesOnArray(copia1, copia2);
     }
 }
