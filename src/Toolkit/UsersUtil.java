@@ -21,12 +21,6 @@ public class UsersUtil {
         return sc.nextInt();
     }
 
-    /**
-     *
-     * @param message to ask the user for input
-     * @param err to display in case there is no int
-     * @return the number the user entered
-     */
     public static float getFloatFromUser(String message, String err) {
         System.out.print(message + ": ");
         while (!sc.hasNextFloat()) {
@@ -35,5 +29,25 @@ public class UsersUtil {
         }
 
         return sc.nextInt();
+    }
+
+    public static double getDoubleFromUser(String message, String err) {
+        System.out.print(message + ": ");
+        while (!sc.hasNextDouble()) {
+            System.out.print(err + ": ");
+            sc.next();
+        }
+        return sc.nextDouble();
+    }
+
+    public static String getStringFromUser(String msg, String err) {
+        String regex = "^[a-zA-Z\\s]+$";
+        System.out.print(msg + ": ");
+        String input = sc.next();
+        while (!input.matches(regex)) {
+            System.out.print(err + ": ");
+            input = sc.next();
+        }
+        return input;
     }
 }

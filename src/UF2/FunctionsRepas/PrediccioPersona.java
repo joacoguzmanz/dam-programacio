@@ -64,23 +64,19 @@ public class PrediccioPersona {
 
     public String inputString(String message) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print(message + ": ");
         while (!sc.hasNextLine()) {
             System.out.print("Ingrese una palabra: ");
             sc.next();
         }
-
         return sc.nextLine();
     }
 
     public String isValidOption(String[] options, String userOption, String errorMsg) {
         Set<String> listOptions = new HashSet<>(Arrays.asList(options));
-
         while (!listOptions.contains(userOption.toLowerCase())) {
             userOption = inputString(errorMsg);
         }
-
         return userOption.toLowerCase();
     }
 
