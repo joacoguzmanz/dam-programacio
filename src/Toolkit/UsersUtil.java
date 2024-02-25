@@ -27,8 +27,7 @@ public class UsersUtil {
             System.out.print(err + ": ");
             sc.next();
         }
-
-        return sc.nextInt();
+        return sc.nextFloat();
     }
 
     public static double getDoubleFromUser(String message, String err) {
