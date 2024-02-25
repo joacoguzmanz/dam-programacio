@@ -36,9 +36,9 @@ public class Peticion {
     /**
      * Asigna un producto a la petición, especificado por su tipo.
      *
-     * @param tipoProducto El tipo de producto que se va a asignar a la petición.
+     * @param producto El tipo de producto que se va a asignar a la petición.
      */
-    public void asignarProducto(TipoProducto tipoProducto) {
+    public void asignarProducto(Producto producto) {
 
     }
 }

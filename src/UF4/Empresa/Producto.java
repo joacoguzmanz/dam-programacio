@@ -3,10 +3,10 @@ package UF4.Empresa;
 /**
  * Representa un producto que se puede vender en la tienda.
  */
-public class TipoProducto {
+public class Producto {
     private String nombre;
     private int codigoId;
-    private float precio;
+    private double precio;
     private int stock;
     private boolean enVenta;
 
@@ -19,7 +19,7 @@ public class TipoProducto {
      * @param stock    El stock disponible del producto.
      * @param enVenta  Indica si el producto está en venta o no.
      */
-    public TipoProducto(String nombre, int codigoId, float precio, int stock, boolean enVenta) {
+    public Producto(String nombre, int codigoId, double precio, int stock, boolean enVenta) {
         this.nombre = nombre;
         this.codigoId = codigoId;
         this.precio = precio;
@@ -68,7 +68,7 @@ public class TipoProducto {
      *
      * @return El precio del producto.
      */
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -77,7 +77,7 @@ public class TipoProducto {
      *
      * @param precio El precio del producto.
      */
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
