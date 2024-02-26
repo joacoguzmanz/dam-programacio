@@ -49,4 +49,15 @@ public class UsersUtil {
         }
         return input;
     }
+
+    public static String getEmailFromUser(String msg, String err) {
+        String regex = ".*@.*\\.com$";
+        System.out.print(msg + ": ");
+        String input = sc.next();
+        while (!input.matches(regex)) {
+            System.out.print(err + ": ");
+            input = sc.next();
+        }
+        return input;
+    }
 }

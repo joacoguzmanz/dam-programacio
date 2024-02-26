@@ -1,13 +1,19 @@
 package UF4.Empresa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Representa una sucursal de la empresa
  */
 public class Sucursal {
+    private int id;
     private String nombre;
     private String direccion;
-    private String telefono;
+    private int telefono;
     private String email;
+    private final List<Cliente> listaClientes;
+    private final List<Encargo> listaEncargos;
 
     /**
      * Construye un nuevo objeto Sucursal con sus detalles
@@ -17,11 +23,23 @@ public class Sucursal {
      * @param telefono  El número de teléfono de la sucursal
      * @param email     La dirección de email de la sucursal
      */
-    public Sucursal(String nombre, String direccion, String telefono, String email) {
+    public Sucursal(int id, String nombre, String direccion, int telefono, String email) {
+        this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
+        this.listaClientes = new ArrayList<>();
+        this.listaEncargos = new ArrayList<>();
+    }
+
+    /**
+     * Retorna la lista de clientes
+     *
+     * @return List de clientes
+     */
+    public List<Cliente> getListaClientes() {
+        return listaClientes;
     }
 
     /**
@@ -65,7 +83,7 @@ public class Sucursal {
      *
      * @return El número de teléfono de la sucursal
      */
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
@@ -74,7 +92,7 @@ public class Sucursal {
      *
      * @param telefono El número de teléfono de la sucursal
      */
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 
@@ -94,6 +112,14 @@ public class Sucursal {
      */
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
@@ -120,7 +146,8 @@ public class Sucursal {
      * @param cliente El cliente a registrar
      */
     public void altaCliente(Cliente cliente) {
-
+        listaClientes.add(cliente);
+        System.out.println("¡Cliente dado de alta!");
     }
 
     /**
@@ -129,7 +156,8 @@ public class Sucursal {
      * @param cliente El cliente a dar de baja
      */
     public void bajaCliente(Cliente cliente) {
-
+        listaClientes.remove(cliente);
+        System.out.println("¡Cliente dado de baja!");
     }
 
     /**
@@ -140,7 +168,8 @@ public class Sucursal {
      * @param encargo       El encargo que se crea
      */
     public void altaEncargo(Cliente cliente, Transportista transportista, Encargo encargo) {
-
+        listaEncargos.add(encargo);
+        System.out.println("¡Encargo agregado a la sucursal!");
     }
 
     /**
@@ -149,6 +178,20 @@ public class Sucursal {
      * @param encargo El encargo a cancelar
      */
     public void anularEncargo(Encargo encargo) {
+        listaEncargos.remove(encargo);
+        System.out.println("¡Encargo anulado de la sucursal!");
+    }
 
+    public void mostrarClientes() {
+        for (Cliente cliente : listaClientes) {
+            System.out.println(cliente.getNombre());
+        }
+    }
+
+    public void mostrarEncargos() {
+        for (Encargo encargo : listaEncargos) {
+            System.out.println("Encargo Nº" + encargo.getId());
+            encargo.mostrarPeticiones();
+        }
     }
 }
