@@ -194,4 +194,12 @@ public class Sucursal {
             encargo.mostrarPeticiones();
         }
     }
+
+    public void mostrarDatos() {
+        System.out.println("ID: " + this.getId());
+        System.out.println("Nombre: " + this.getNombre());
+        System.out.println("Direccion: " + this.getDireccion());
+        System.out.println("Telefono: " + this.getTelefono());
+        System.out.println("Email: " + this.getEmail());
+    }
 }

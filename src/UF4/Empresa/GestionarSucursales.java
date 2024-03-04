@@ -32,6 +32,18 @@ public class GestionarSucursales {
         }
     }
 
+    public static void listarUnaSucursal(List<Sucursal> sucursales) {
+        int idSucursal = UsersUtil.getIntFromUser("Ingrese ID de la sucursal", "Ingrese un número");
+        for (Sucursal sucursal : sucursales) {
+            if (idSucursal != sucursal.getId()) {
+                System.out.println("La sucursal no existe");
+            } else {
+                Sucursal selectedSucursal = getById(idSucursal, sucursales);
+                selectedSucursal.mostrarDatos();
+            }
+        }
+    }
+
     public static void modificarSucursal(List<Sucursal> sucursales) {
         int idSucursal = UsersUtil.getIntFromUser("Ingrese ID de la sucursal", "Ingrese un número");
         for (Sucursal sucursal : sucursales) {
@@ -39,6 +51,7 @@ public class GestionarSucursales {
                 System.out.println("La sucursal no existe");
             } else {
                 Sucursal sucursalToMod = getById(idSucursal, sucursales);
+                System.out.println("-- Menu --");
                 System.out.println("1. Nombre | 2. Direccion | 3. Telefono | 4. Mail");
                 int option = UsersUtil.getIntFromUser("Que desea modificar", "Ingrese un número");
                 switch (option) {
