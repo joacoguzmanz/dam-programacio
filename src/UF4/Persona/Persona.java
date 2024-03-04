@@ -5,7 +5,9 @@ public class Persona {
     //Fitxer Persona.java
     private String dni;
     private String nom;
+    private String cognom;
     private short edat;
+    private String direccion;
 
     public Persona(String dni, String nom, short edat) {
         this.dni = dni;
@@ -64,6 +66,22 @@ public class Persona {
 
     public short getEdat() {
         return edat;
+    }
+
+    public String getCognom() {
+        return cognom;
+    }
+
+    public void setCognom(String cognom) {
+        this.cognom = cognom;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public void visualitzar() {
