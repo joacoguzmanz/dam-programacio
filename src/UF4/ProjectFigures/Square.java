@@ -14,10 +14,6 @@ public class Square extends Shape {
         this.side = side;
     }
 
-    public Square(int side) {
-        this.side = side;
-    }
-
     public int getSide() {
         return side;
     }

@@ -14,11 +14,6 @@ public class Parallelogram extends Shape {
         this.h = h;
     }
 
-    public Parallelogram(int b, int h) {
-        this.b = b;
-        this.h = h;
-    }
-
     public int getB() {
         return b;
     }

@@ -16,12 +16,6 @@ public class Trapezoid extends Shape {
         this.h = h;
     }
 
-    public Trapezoid(int a, int b, int h) {
-        this.a = a;
-        this.b = b;
-        this.h = h;
-    }
-
     public int getA() {
         return a;
     }

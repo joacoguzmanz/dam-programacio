@@ -14,11 +14,6 @@ public class Rhombus extends Shape {
         this.dm = dm;
     }
 
-    public Rhombus(int dM, int dm) {
-        this.dM = dM;
-        this.dm = dm;
-    }
-
     public int getdM() {
         return dM;
     }

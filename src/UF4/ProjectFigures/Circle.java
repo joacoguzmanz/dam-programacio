@@ -9,10 +9,6 @@ public class Circle extends Shape {
 
     }
 
-    public Circle(int radius) {
-        this.radius = radius;
-    }
-
     public Circle(int id, String name, int radius) {
         super(id, name);
         this.radius = radius;

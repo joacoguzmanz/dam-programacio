@@ -8,11 +8,6 @@ public class Rectangle extends Shape {
 
     }
 
-    public Rectangle(int side1, int side2) {
-        this.side1 = side1;
-        this.side2 = side2;
-    }
-
     public Rectangle(int id, String name, int side1, int side2) {
         super(id, name);
         this.side1 = side1;
