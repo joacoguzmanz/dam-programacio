@@ -5,6 +5,17 @@ public class Trapezoid extends Shape {
     private int b;
     private int h;
 
+    public Trapezoid() {
+
+    }
+
+    public Trapezoid(int id, String name, int a, int b, int h) {
+        super(id, name);
+        this.a = a;
+        this.b = b;
+        this.h = h;
+    }
+
     public Trapezoid(int a, int b, int h) {
         this.a = a;
         this.b = b;
@@ -33,5 +44,10 @@ public class Trapezoid extends Shape {
 
     public void setH(int h) {
         this.h = h;
+    }
+
+    @Override
+    public double calculateArea() {
+        return (double) (this.a + this.b) * this.h / 2;
     }
 }

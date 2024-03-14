@@ -11,7 +11,18 @@ public class Triangle extends Shape {
 
     }
 
+    public Triangle(int id, String name, int base) {
+        super(id, name);
+        this.base = base;
+    }
+
     public Triangle(int base, int h) {
+        this.base = base;
+        this.h = h;
+    }
+
+    public Triangle(int id, String name, int base, int h) {
+        super(id, name);
         this.base = base;
         this.h = h;
     }

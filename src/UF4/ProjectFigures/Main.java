@@ -30,10 +30,6 @@ public class Main {
     public static void handleShapes(int option) {
         switch (option) {
             case 1:
-                Triangle triangle = new Triangle(3, 4);
-                Triangle triangle1 = new Triangle();
-                triangle1.readData();
-                System.out.println(triangle1.calculateArea());
                 // Call method to handle Triangle
                 break;
             case 2:

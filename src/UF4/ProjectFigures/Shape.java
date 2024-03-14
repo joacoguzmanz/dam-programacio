@@ -8,6 +8,10 @@ public class Shape {
 
     }
 
+    public Shape(int id) {
+        this.id = id;
+    }
+
     public Shape(int id, String name) {
         this.id = id;
         this.name = name;
