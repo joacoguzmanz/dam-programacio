@@ -6,11 +6,11 @@ import java.util.List;
 
 public class HandleShapes {
     private static int lastId;
-    int min = 0, max = 10;
-    int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
+    static int min = 0, max = 10;
+    static int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 
     // Circle
-    public void createCircle(List<Shape> shapeList) {
+    public static void createCircle(List<Shape> shapeList) {
         String name = UsersUtil.getStringFromUser("Enter a name for the circle", "ERR. Only letters");
         int radius = UsersUtil.getIntFromUser("Enter the radius", "ERR. Only number");
 
@@ -29,7 +29,7 @@ public class HandleShapes {
     }
 
     // Parallelogram
-    public void createParallelogram(List<Shape> shapeList) {
+    public static void createParallelogram(List<Shape> shapeList) {
         String shapeName = UsersUtil.getStringFromUser("Enter a name for the parallelogram", "ERR. Only letters");
         int base = UsersUtil.getIntFromUser("Enter the base", "ERR. Only number");
         int height = UsersUtil.getIntFromUser("Enter the height", "ERR. Only number");
@@ -50,7 +50,7 @@ public class HandleShapes {
     }
 
     // Rectangle
-    public void createRectangle(List<Shape> shapeList) {
+    public static void createRectangle(List<Shape> shapeList) {
         String shapeName = UsersUtil.getStringFromUser("Enter a name for the rectangle", "ERR. Only letters");
         int sideOne = UsersUtil.getIntFromUser("Enter one side of the rectangle", "ERR. Only numbers");
         int sideTwo = UsersUtil.getIntFromUser("Enter the other side of the rectangle", "ERR. Only numbers");
@@ -71,7 +71,7 @@ public class HandleShapes {
     }
 
     // Rhombus
-    public void createRhombus(List<Shape> shapeList) {
+    public static void createRhombus(List<Shape> shapeList) {
         String shapeName = UsersUtil.getStringFromUser("Enter a name for the rhombus", "ERR. Only letters");
         int diagonalOne = UsersUtil.getIntFromUser("Enter the greatest diagonal", "ERR. Only numbers");
         int diagonalTwo = UsersUtil.getIntFromUser("Enter the shortest diagonal", "ERR. Only numbers");
@@ -92,7 +92,7 @@ public class HandleShapes {
     }
 
     // Square
-    public void createSquare(List<Shape> shapeList) {
+    public static void createSquare(List<Shape> shapeList) {
         String shapeName = UsersUtil.getStringFromUser("Enter a name for the square", "ERR. Only letters");
         int side = UsersUtil.getIntFromUser("Enter the side of the square", "ERR. Only numbers");
 
@@ -111,7 +111,7 @@ public class HandleShapes {
     }
 
     // Trapezoid
-    public void createTrapezoid(List<Shape> shapeList) {
+    public static void createTrapezoid(List<Shape> shapeList) {
         String shapeName = UsersUtil.getStringFromUser("Enter a name for the trapezoid", "ERR. Only letters");
         int sideA = UsersUtil.getIntFromUser("Enter the short side", "ERR. Only numbers");
         int sideB = UsersUtil.getIntFromUser("Enter the base", "ERR. Only numbers");
@@ -134,7 +134,7 @@ public class HandleShapes {
     }
 
     // Triangle
-    public void createTriangle(List<Shape> shapeList) {
+    public static void createTriangle(List<Shape> shapeList) {
         String shapeName = UsersUtil.getStringFromUser("Enter a name for the triangle", "ERR. Only letters");
         int base = UsersUtil.getIntFromUser("Enter the base", "ERR. Only numbers");
         int height = UsersUtil.getIntFromUser("Enter the height", "ERR. Only numbers");

@@ -40,7 +40,6 @@ public class Triangle extends Shape {
 
     @Override
     public void readData() {
-        Scanner sc = new Scanner(System.in);
         this.base = UsersUtil.getIntFromUser("Enter the base of the triangle", "ERROR. Try again");
         this.h = UsersUtil.getIntFromUser("Enter the height of the triangle", "ERROR. Try again");
     }
