@@ -1,6 +1,5 @@
 package UF4.ProjectFigures;
 
-import java.util.Scanner;
 import Toolkit.UsersUtil;
 
 public class Triangle extends Shape {

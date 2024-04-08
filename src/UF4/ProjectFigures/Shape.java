@@ -39,7 +39,7 @@ public class Shape {
     }
 
     public double calculateArea() {
-        return 4;
+        return -1;
     }
 
     public void readData() {

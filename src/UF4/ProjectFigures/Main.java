@@ -16,7 +16,7 @@ public class Main {
             exit = goOn();
         }
 
-        if ( listOfShapes.isEmpty()) {
+        if (listOfShapes.isEmpty()) {
             System.out.println("No hay figuras cargadas");
         } else {
             showShapes(listOfShapes);
