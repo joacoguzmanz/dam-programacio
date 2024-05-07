@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class GenerateFileNotes {
     public static final String MARCA_FI = "fi";
-    public static final String LINE_TEXT = "%s %s %f";
 
     public static void main(String[] args) {
         try {
@@ -19,6 +18,7 @@ public class GenerateFileNotes {
             printStream.println("Joan Sebastià 4.5 8.5 5 6.5 7 -1");
             printStream.println("Carme González 6.5 8.75 10 9.5 -1");
             printStream.println("fi");
+            printStream.close();
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
