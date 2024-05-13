@@ -1,4 +1,4 @@
-package UF5.GUIButton;
+package UF5.GUITwoButtons;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,6 +16,9 @@ public class Window extends JFrame {
 
         Button button = new Button("Click me!", new Color(26, 26, 26), Color.WHITE);
         panel.add(button);
+
+        Button secondButton = new Button("Click me too!", new Color(229, 28, 0), Color.WHITE);
+        panel.add(secondButton);
 
         getContentPane().add(panel);
     }
