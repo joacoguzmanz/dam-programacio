@@ -10,7 +10,6 @@ public class Button extends JButton {
         setBounds(50, 50, 95, 30);
         setBorder(new EmptyBorder(10, 20, 10, 20));
 
-
         setMargin(new Insets(10,10,10,10));
 
         setOpaque(true);

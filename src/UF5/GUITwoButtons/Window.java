@@ -10,7 +10,7 @@ public class Window extends JFrame {
     public Window() {
         JPanel panel = new JPanel();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Single Button");
+        setTitle("Two Buttons");
         setSize(600, 600);
         setLocationRelativeTo(null);
 
