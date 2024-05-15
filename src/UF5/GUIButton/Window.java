@@ -14,12 +14,6 @@ public class Window extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
 
-//        JPanel panel = new JPanel();
-//        panel.setPreferredSize(new Dimension(300, 300));
-//        panel.setBackground(Color.RED);
-//        panel.setLayout(new FlowLayout());
-//        add(panel);
-
         Button button = new Button("Click me!");
         add(button);
     }
