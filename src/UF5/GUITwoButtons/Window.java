@@ -4,14 +4,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import UF5.Components.Button;
 
-import java.awt.Color;
-
 public class Window extends JFrame {
-    public Window() {
+    public Window(String title) {
         JPanel panel = new JPanel();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Two Buttons");
-        setSize(600, 600);
+        setTitle(title);
+        setSize(400, 400);
         setLocationRelativeTo(null);
 
         Button button = new Button("Click me!");
@@ -20,6 +18,6 @@ public class Window extends JFrame {
         Button secondButton = new Button("Click me too!");
         panel.add(secondButton);
 
-        getContentPane().add(panel);
+        add(panel);
     }
 }
