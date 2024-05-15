@@ -1,22 +1,26 @@
 package UF5.GUIButton;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+
 import UF5.Components.Button;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Window extends JFrame {
-    public Window() {
-        JPanel panel = new JPanel();
+    public Window(String title) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Single Button");
-        setSize(600, 600);
+        setTitle(title);
+        setSize(400, 400);
         setLocationRelativeTo(null);
+        setLayout(new FlowLayout());
 
-        Button button = new Button("Click me!", new Color(26, 26, 26), Color.WHITE);
-        panel.add(button);
+//        JPanel panel = new JPanel();
+//        panel.setPreferredSize(new Dimension(300, 300));
+//        panel.setBackground(Color.RED);
+//        panel.setLayout(new FlowLayout());
+//        add(panel);
 
-        getContentPane().add(panel);
+        Button button = new Button("Click me!");
+        add(button);
     }
 }

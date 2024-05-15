@@ -1,19 +1,15 @@
 package UF5.Components;
 
-import java.awt.*;
 import javax.swing.JButton;
-import javax.swing.border.EmptyBorder;
 
 public class Button extends JButton {
-    public Button(String text, Color bg, Color fg) {
-        super(text);
-        setBounds(50, 50, 95, 30);
-        setBorder(new EmptyBorder(10, 20, 10, 20));
+    public Button(String text) {
+        setText(text);
+        setFocusable(false);
 
-        setMargin(new Insets(10,10,10,10));
-
-        setOpaque(true);
-        setBackground(bg);
-        setForeground(fg);
+        addActionListener(e -> System.out.println("Hola"));
+        // setForeground(new Color(255, 255, 0));
+        // setOpaque(true);
+        // setBackground(new Color(26, 26, 26));
     }
 }

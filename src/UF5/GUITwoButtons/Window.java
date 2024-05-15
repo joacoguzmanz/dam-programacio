@@ -14,10 +14,10 @@ public class Window extends JFrame {
         setSize(600, 600);
         setLocationRelativeTo(null);
 
-        Button button = new Button("Click me!", new Color(26, 26, 26), Color.WHITE);
+        Button button = new Button("Click me!");
         panel.add(button);
 
-        Button secondButton = new Button("Click me too!", new Color(229, 28, 0), Color.WHITE);
+        Button secondButton = new Button("Click me too!");
         panel.add(secondButton);
 
         getContentPane().add(panel);
