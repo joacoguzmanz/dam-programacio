@@ -7,7 +7,7 @@ public class Button extends JButton {
         setText(text);
         setFocusable(false);
 
-        addActionListener(e -> System.out.println("Hola"));
+        // addActionListener(e -> System.out.println("Hola"));
         // setForeground(new Color(255, 255, 0));
         // setOpaque(true);
         // setBackground(new Color(26, 26, 26));
