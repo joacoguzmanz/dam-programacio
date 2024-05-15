@@ -3,6 +3,7 @@ package UF5.GUIText;
 import UF5.Components.Button;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Window extends JFrame {
     public Window(String title) {
