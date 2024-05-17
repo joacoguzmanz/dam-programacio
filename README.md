@@ -1,6 +1,6 @@
-<h1 style="text-align:center">Programació</h1>
+<h1 align="center">Programació</h1>
 
-<p style="text-align:center">Prat Educació - CFGS DAM</p>
+<p align="center">Prat Educació - CFGS DAM 23/25</p>
 
 ## Introducció
 Repository de l'assignatura de programació del cicle formatiu de grau superior de Desenvolupament d'Aplicacions
